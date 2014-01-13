@@ -1,0 +1,15 @@
+/*
+ Theme Name:   Hilary Dixon 2014
+ Theme URI:    http://github.com/teameight/hdix-theme
+ Description:  Photojax Child Theme
+ Author:       Andrew Mowe, Spencer Hansen, Team Eight
+ Author URI:   http://team-eight.com
+ Template:     photojax
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  photojax-child
+*/
+
+@import url("../photojax/style.css");
+
+body { font: 13px/22px Georgia, serif;}
