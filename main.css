@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#wrap {
+    width:100%;
+    position:relative;
+    height: 745px;
+    overflow: hidden;
+}
+#mainbg {
+    width: 1280px;
+    height: 745px;
+    background: url('../img/mainbg.jpg');
+    left: 50%;
+    position: absolute;
+    margin-left: -640px;
+}
+#navwrap {
+    position: absolute;
+    left: 770px;
+    top: 126px;
+    width: 316px;
+    height: 466px;
+}
+#navwrap ul li {
+    position: absolute;
+    background:url('../img/sprites.png') 0 0 no-repeat;
+}
+#navwrap ul li a {
+    display: block;
+    margin-left: 20%;
+    margin-top: 0;
+    width: 80%;
+    height: 100%;
+    text-indent:-999em;
+    overflow:hidden;
+}
+#navwrap ul li.about {
+    left: 34px;
+    top: 0;
+    width: 138px;
+    height: 92px;
+}
+#navwrap ul li.projects {
+    left: 38px;
+    top: 87px;
+    width: 218px;
+    height: 113px;
+    background-position: -138px 0;
+}
+#navwrap ul li.photography {
+    left: 34px;
+    top: 205px;
+    width: 282px;
+    height: 84px;
+    background-position: -358px 0;
+}
+#navwrap ul li.writing {
+    left: 14px;
+    top: 293px;
+    width: 184px;
+    height: 91px;
+    background-position: -640px 0;
+}
+#navwrap ul li.contact {
+    left: 0;
+    top: 353px;
+    width: 168px;
+    height: 113px;
+    background-position: -822px 0;
+}
+#navwrap ul li.about a {
+    margin-left: 26px;
+    margin-top: 9px;
+    width: 102px;
+    height: 72px;
+}
+#navwrap ul li.projects a {
+    margin-left: 50px;
+    margin-top: 13px;
+    width: 160px;
+    height: 93px;
+}
+#navwrap ul li.photography a {
+    margin-left: 41px;
+    margin-top: 13px;
+    width: 234px;
+    height: 61px;
+}
+#navwrap ul li.writing a {
+    margin-left: 20%;
+    margin-top: 6px;
+    width: 137px;
+    height: 74px;
+}
+#navwrap ul li.contact a {
+    margin-left: 25px;
+    margin-top: 24px;
+    width: 131px;
+    height: 81px;
+}
+#contactform{
+    width: 90%;
+    margin: 60px auto 0;
+    max-width: 400px;
+    background: #fff;
+    padding: 5%;
+    z-index: 1002;
+    height: 500px;
+    overflow: hidden;
+}
+#contactwrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1002;
+    overflow: auto;
+    display: none;
+    height: 100%;
+}
+.contact-fill {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+    display:none;
+}
+#close-contact {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 -21px;
+    float: right;
+    text-indent: -999em;
+}
+#close-contact a {
+    display: block;
+    border: 0;
+    padding-left: 28px;
+    color: #c55500;
+}
+#close-contact a:before, #close-contact a:after {
+    right: 6px;
+    width: 2px;
+    height: 16px;
+    margin-top: -6px;
+    background: #888;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#close-contact a:hover:before, #close-contact a:hover:after {
+    background: #c55500;
+}
+#close-contact a:after {
+    right: -1px;
+    width: 16px;
+    height: 2px;
+    margin-top: 1px;
+}
+#close-contact a:before, #close-contact a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 900px) {
+    #mainbg {
+        height: 745px;
+        left: auto;
+        margin-left: 0;
+        right: -200px;
+        background-position: top right;
+    }
+
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+
+}
