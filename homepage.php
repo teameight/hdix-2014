@@ -351,6 +351,17 @@ Template Name: Home Page
 <![endif]-->
 
 <div id="wrap">
+    <div id="logo">
+        <?php
+        // Show custom image logo if defined in the admin
+        if( of_get_option('custom_logo','') !== '' ) { ?>
+            <a href="<?php echo home_url(); ?>/" title="<?php get_bloginfo( 'name' ); ?>" rel="home"><img src="<?php echo of_get_option('custom_logo'); ?>" alt="<?php get_bloginfo( 'name' ) ?>" /></a>
+        <?php }
+        // No custom img logo - show text
+        else { ?>
+            <h2><a href="<?php echo home_url(); ?>/" title="<?php get_bloginfo( 'name' ); ?>" rel="home"><?php echo get_bloginfo( 'name' ); ?></a></h2>
+        <?php } ?>
+    </div><!-- /logo -->
     <div id="footer-nav">
     <?php
     wp_nav_menu( array(
@@ -367,7 +378,7 @@ Template Name: Home Page
                     <li class="about" style="width: 138px;"><a href="/about">about</a></li>
                     <li class="projects" style="width: 218px;"><a href="/projects">projects</a></li>
                     <li class="photography" style="width: 282px;"><a href="/portfolio">photography</a></li>
-                    <li class="writing" style="width: 184px;"><a href="/category/writing">writing</a></li>
+                    <li class="writing" style="width: 184px;"><a href="/writing">writing</a></li>
                     <li class="contact" style="width: 168px;"><a href="#">contact</a></li>
                 </ul>
             </nav>

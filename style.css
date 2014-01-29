@@ -12,12 +12,50 @@
 
 @import url("../photojax/style.css");
 
+@font-face
+{
+    font-family: Typewriter;
+    src: url(linowrite.ttf);
+}
+
 html, body {
     height: 100%;
     background: #d7d7d7;
 }
 
 body { font: 13px/22px Georgia, serif;}
+
+body a {
+    color: #0abab5;
+}
+
+h1 a, h2 a, h3 a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: Typewriter, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+#page-heading h1, #gallery-heading h1 {
+    font-family: Typewriter, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, #sidebar a:hover {
+    color: #0abab5;
+}
+
+#navigation .sf-menu > li > a:hover, #navigation .sf-menu > li.sfHover > a, #navigation .sf-menu > .current-menu-item > a, #navigation .current-menu-parent > a, #navigation .current-menu-parent > a:hover, #navigation .sf-menu > .current-menu-item > a:hover {
+    color: #0abab5;
+}
+
+.page-numbers a:hover, .page-numbers.current, .tagcloud a:hover {
+    background-color: #0abab5;
+    border-color: #0abab5;
+}
+
+.entry h3 { margin: 20px 0;}
 
 .post-type-archive-galleries #header {
     padding-bottom: 40px;
@@ -32,7 +70,7 @@ body { font: 13px/22px Georgia, serif;}
     background: white;
 }
 
-#header, #page-heading {
+#header, #page-heading, .loop-entry, #sidebar h6, #sidebar .widget_recent_entries li, #sidebar .widget_categories li, #sidebar .widget_archive li, #sidebar .widget_meta li, #sidebar .wpex-taxonomies-widget li, #sidebar .wpex-recent-post-types-widget li, #sidebar .widget_pages li, #sidebar .widget_links li, #sidebar .widget_recent_comments li {
     border-bottom: 1px solid #B3B3B3;
 }
 
@@ -69,7 +107,7 @@ body { font: 13px/22px Georgia, serif;}
     background: #fff;
     padding: 5%;
     z-index: 1002;
-    height: 500px;
+    height: 600px;
     overflow: hidden;
 }
 #contactwrap {
@@ -136,6 +174,10 @@ body { font: 13px/22px Georgia, serif;}
     content: "";
     position: absolute;
     top: 50%;
+}
+
+.home #logo {
+    display: none;
 }
 
 .home #wrap {
@@ -228,11 +270,89 @@ body { font: 13px/22px Georgia, serif;}
 }
 
 .proj-link:hover {
-    color: #ff0000;
+    color: #0abab5;
     text-decoration: none;
 }
 
 article {
     font-size: 15px;
     line-height: 1.4;
+}
+
+.symple-testimonial-content {
+    background: #d7d7d7 !important;
+}
+
+.symple-testimonial-content:after {
+    border-right: 15px solid #d7d7d7 !important;
+}
+
+.tagcloud a {
+    background: none;
+    color: #555 !important;
+}
+
+.tagcloud a:hover {
+    color: #fff !important;
+}
+
+@media screen and (max-width: 960px) {
+    .home #footer-nav ul li {
+        font-size: 11px;
+        width: auto;
+    }
+    .home #footer-nav .sub-menu {
+        max-width: 50px;
+    }
+
+    .home #footer-nav .sub-menu li {
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #mainbg {
+        left: inherit;
+    }
+
+    .home #wrap #footer-nav {
+        right: 25px;
+        top: inherit;
+        bottom: 30px;
+        width: 100%;
+}
+
+    #footer {
+        margin: 10px auto 40px;
+    }
+
+    #copy, .home #copy, #footer #footer-nav {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .home #footer-nav ul li {
+        font-size: 11px;
+        width: auto;
+    }
+
+    .leftLabel .desc {
+        width: auto !important;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .home #logo {
+        display: block;
+        position: absolute;
+        top: 20px;
+        z-index: 100;
+        right: 10%;
+    }
+
+    .home #logo h2 {
+        font-size: 2em;
+    }
 }

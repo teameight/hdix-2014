@@ -27,7 +27,7 @@ get_header(); // Loads the header.php template ?>
 //                          var_dump($project);
                         $external = $project['external'];
                         $ext_link = $project['ext_link'];
-                        $int_link = get_category_link($project['int_link']->term_id);
+                        $int_link = get_term_link($project['int_link']);
                         if($even) {
                         echo '<div class="symple-column symple-one-half symple-column-first ">';
                             }
@@ -38,6 +38,8 @@ get_header(); // Loads the header.php template ?>
 
                         <p><strong><a class="proj-link" href="<?php echo ($external == 'yes' ? $ext_link : $int_link); ?>"><?php echo $project['project_title']; ?></a></strong></p>
                         <p><?php echo $project['project_description']; ?></p>
+
+                        </div>
 
                     <?php $even = !$even;
                     endforeach;
